@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #ffd1ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 20px;
+    animation: backgroundPulse 10s ease infinite;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.content-stage {
+    display: none;
+    width: 100%;
+}
+
+.content-stage.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* MEME ANIMATIONS */
+
+/* GIF Container Animations */
+.gif-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cat-gif {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 4px solid white;
+    box-shadow: 0 0 25px rgba(255, 64, 129, 0.6);
+    border-radius: 15px;
+}
+
+/* Animation Classes */
+.bounce-animation {
+    animation: bounce 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.spin-animation {
+    animation: spin 1s ease-out;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(0); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.shock-animation {
+    animation: shock 0.5s ease-out;
+}
+
+@keyframes shock {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.suspicious-animation {
+    animation: suspicious 2s infinite;
+}
+
+@keyframes suspicious {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-10px) rotate(-5deg); }
+    75% { transform: translateX(10px) rotate(5deg); }
+}
+
+.angry-animation {
+    animation: angry 0.3s infinite;
+}
+
+@keyframes angry {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.laugh-animation {
+    animation: laugh 0.5s infinite;
+}
+
+@keyframes laugh {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.celebration-animation {
+    animation: celebration 2s ease-out;
+}
+
+@keyframes celebration {
+    0% { 
+        opacity: 0;
+        transform: scale(0) rotate(-180deg);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Message Box Animations */
+.message-box {
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
+    border: 4px solid #ff4081;
+}
+
+.slide-in-animation {
+    animation: slideIn 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes slideIn {
+    0% { 
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pop-animation {
+    animation: pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pop {
+    0% { 
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.shake-animation {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.vibrate-animation {
+    animation: vibrate 0.3s infinite;
+}
+
+@keyframes vibrate {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, 2px); }
+}
+
+.wobble-animation {
+    animation: wobble 0.8s infinite;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+.explode-animation {
+    animation: explode 0.5s;
+}
+
+@keyframes explode {
+    0% { 
+        opacity: 0;
+        transform: scale(0);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.dance-animation {
+    animation: dance 1s infinite;
+}
+
+@keyframes dance {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-5deg); }
+    75% { transform: translateY(10px) rotate(5deg); }
+}
+
+.victory-animation {
+    animation: victory 1.5s ease-out;
+}
+
+@keyframes victory {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Text Animations */
+.message {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.3rem;
+    color: #ff4081;
+    margin-bottom: 10px;
+    animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #ff4081; }
+    100% { color: #6a11cb; }
+}
+
+.sub-message {
+    font-size: 1.5rem;
+    color: #6a11cb;
+    margin-bottom: 10px;
+    font-weight: 700;
+    animation: textGlow 2s infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% { text-shadow: 0 0 5px rgba(255, 64, 129, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(255, 64, 129, 0.8); }
+}
+
+.special-message, .choice-message, .reaction-message {
+    font-size: 1.8rem;
+    color: #ff4081;
+    margin-bottom: 25px;
+    font-weight: 800;
+    animation: textFloat 3s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Button Styles & Animations */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 18px 35px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    font-family: 'Comic Neue', cursive;
+    min-width: 200px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.see-btn {
+    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    box-shadow: 0 8px 0 #1B5E20, 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ignore-btn {
+    background: linear-gradient(45deg, #FF5722, #D84315);
+    box-shadow: 0 8px 0 #BF360C, 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.final-btn {
+    background: linear-gradient(45deg, #E91E63, #C2185B);
+    font-size: 1.7rem;
+    padding: 22px 40px;
+    box-shadow: 0 10px 0 #880E4F, 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Animations */
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 8px 0 #1B5E20, 0 15px 20px rgba(0, 0, 0, 0.2);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 8px 0 #1B5E20, 0 20px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.wiggle-animation {
+    animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.tremble-animation {
+    animation: tremble 0.3s infinite;
+}
+
+@keyframes tremble {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+.glow-animation {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { 
+        box-shadow: 0 8px 0 #1B5E20, 0 15px 20px rgba(0, 0, 0, 0.2);
+    }
+    100% { 
+        box-shadow: 0 8px 0 #1B5E20, 0 15px 30px rgba(76, 175, 80, 0.4);
+    }
+}
+
+.fire-animation {
+    animation: fire 0.5s infinite;
+}
+
+@keyframes fire {
+    0%, 100% { 
+        background: linear-gradient(45deg, #FF5722, #D84315);
+    }
+    50% { 
+        background: linear-gradient(45deg, #FF9800, #F57C00);
+    }
+}
+
+.heartbeat-animation {
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.party-animation {
+    animation: party 1s infinite;
+}
+
+@keyframes party {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        background: linear-gradient(45deg, #E91E63, #C2185B);
+    }
+    25% { 
+        transform: scale(1.1) rotate(5deg);
+        background: linear-gradient(45deg, #FF4081, #E91E63);
+    }
+    75% { 
+        transform: scale(1.1) rotate(-5deg);
+        background: linear-gradient(45deg, #C2185B, #880E4F);
+    }
+}
+
+/* Final Message Styles */
+.small-text {
+    font-size: 1.2rem;
+    color: #6a11cb;
+    margin: 15px 0 20px;
+    font-weight: 600;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+.rose-message {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4rem;
+    color: #ff4081;
+    margin-bottom: 20px;
+    animation: rainbowText 3s infinite;
+}
+
+@keyframes rainbowText {
+    0% { color: #ff4081; }
+    25% { color: #6a11cb; }
+    50% { color: #2196F3; }
+    75% { color: #4CAF50; }
+    100% { color: #ff4081; }
+}
+
+.main-message {
+    font-size: 2rem;
+    color: #6a11cb;
+    margin-bottom: 25px;
+    font-weight: 800;
+    animation: textBounce 2s infinite;
+}
+
+@keyframes textBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.love-note {
+    font-size: 1.4rem;
+    color: #ff4081;
+    margin: 20px 0 10px;
+    font-weight: 700;
+}
+
+.love-message {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.6;
+    text-align: left;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 4px solid #ff4081;
+    border-radius: 0 10px 10px 0;
+    animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.signature {
+    font-size: 1.3rem;
+    color: #6a11cb;
+    margin-top: 25px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .content-wrapper {
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .gif-container {
+        max-width: 250px;
+    }
+    
+    .message {
+        font-size: 2rem;
+    }
+    
+    .sub-message {
+        font-size: 1.3rem;
+    }
+    
+    .special-message, .choice-message, .reaction-message {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 15px 25px;
+        font-size: 1.3rem;
+        min-width: 170px;
+    }
+    
+    .final-btn {
+        font-size: 1.4rem;
+        padding: 18px 30px;
+    }
+    
+    .rose-message {
+        font-size: 2rem;
+    }
+    
+    .main-message {
+        font-size: 1.7rem;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .content-wrapper {
+        gap: 15px;
+        max-width: 320px;
+    }
+    
+    .gif-container {
+        max-width: 200px;
+    }
+    
+    .message-box {
+        padding: 20px;
+    }
+    
+    .message {
+        font-size: 1.7rem;
+    }
+    
+    .sub-message {
+        font-size: 1.2rem;
+    }
+    
+    .special-message, .choice-message, .reaction-message {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 220px;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+        min-width: auto;
+    }
+    
+    .rose-message {
+        font-size: 1.7rem;
+    }
+    
+    .main-message {
+        font-size: 1.4rem;
+    }
+    
+    .love-message {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+

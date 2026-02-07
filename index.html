@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Day - Special Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Stage 1: Cat GIF + Text Together -->
+        <div class="content-stage active" id="stage1">
+            <div class="content-wrapper">
+                <div class="gif-container bounce-animation">
+                    <img src="Gifs/first.gif" alt="Kissing Cat" class="cat-gif">
+                </div>
+                <div class="message-box slide-in-animation">
+                    <h1 class="message">Today is a special day</h1>
+                    <h2 class="sub-message">and I have got something for you</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Stage 2: Inlove cat -->
+        <div class="content-stage" id="stage2">
+            <div class="content-wrapper">
+                <div class="gif-container spin-animation">
+                    <img src="Gifs/Inlove.gif" alt="Inlove Cat" class="cat-gif">
+                </div>
+                <div class="message-box pop-animation">
+                    <h2 class="special-message">A little something for you...</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Stage 3: Two Buttons Only -->
+        <div class="content-stage" id="stage3">
+            <div class="content-wrapper">
+                <div class="gif-container float-animation">
+                    <img src="Gifs/Inlove.gif" alt="Inlove Cat" class="cat-gif">
+                </div>
+                <div class="message-box shake-animation">
+                    <h2 class="choice-message">Will you have a look my love?</h2>
+                    <div class="button-container">
+                        <button class="btn see-btn pulse-animation" id="see-btn">
+                            Yes
+                        </button>
+                        <button class="btn ignore-btn wiggle-animation" id="ignore-btn">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Ignore Reactions -->
+        <div class="content-stage" id="ignore-stage1">
+            <div class="content-wrapper">
+                <div class="gif-container shock-animation">
+                    <img src="Gifs/Shocked.gif" alt="Shocked Cat" class="cat-gif">
+                </div>
+                <div class="message-box vibrate-animation">
+                    <h2 class="reaction-message">That's surprising. Click yes my love</h2>
+                    <div class="button-container">
+                        <button class="btn ignore-btn shake-animation" id="ignore-btn1">
+                            No
+                        </button>
+                        <button class="btn see-btn bounce-animation" id="see-btn1">
+                            Yes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-stage" id="ignore-stage2">
+            <div class="content-wrapper">
+                <div class="gif-container suspicious-animation">
+                    <img src="Gifs/SUs.gif" alt="Sus Cat" class="cat-gif">
+                </div>
+                <div class="message-box wobble-animation">
+                    <h2 class="reaction-message">Now you're being naughty, can you click on yes pleaseee?</h2>
+                    <div class="button-container">
+                        <button class="btn ignore-btn tremble-animation" id="ignore-btn2">
+                            No
+                        </button>
+                        <button class="btn see-btn glow-animation" id="see-btn2">
+                            Yes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-stage" id="ignore-stage3">
+            <div class="content-wrapper">
+                <div class="gif-container angry-animation">
+                    <img src="Gifs/HandsUp.gif" alt="Angry Cat" class="cat-gif">
+                </div>
+                <div class="message-box explode-animation">
+                    <h2 class="reaction-message">Oh no you didn't! Last warning!</h2>
+                    <div class="button-container">
+                        <button class="btn ignore-btn fire-animation" id="ignore-btn3">
+                            No
+                        </button>
+                        <button class="btn see-btn heartbeat-animation" id="see-btn3">
+                            Yes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Stage where ignore button disappears -->
+        <div class="content-stage" id="ignore-final">
+            <div class="content-wrapper">
+                <div class="gif-container laugh-animation">
+                    <img src="Gifs/Laugh.gif" alt="Laughing Cat" class="cat-gif">
+                </div>
+                <div class="message-box dance-animation">
+                    <h2 class="reaction-message">Muahahaha! I made the button disappear...</h2>
+                    <p class="small-text">You havent got any option now.</p>
+                    <div class="button-container">
+                        <button class="btn final-btn party-animation" id="final-btn">
+                            Click Yes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Final Rose Reveal (For ignore path) -->
+        <div class="content-stage" id="rose-reveal">
+            <div class="content-wrapper">
+                <div class="gif-container celebration-animation">
+                    <img src="Gifs/Love You Cat GIF.gif" alt="Cat with Rose" class="cat-gif">
+                </div>
+                <div class="message-box victory-animation">
+                    <h1 class="rose-message">I knew you would click this!</h1>
+                    <h2 class="main-message">Happy Rose Day my lovely rose!</h2>
+                    <p class="love-note">To my dearest Love,</p>
+                    <p class="love-message">Just like every rose has its perfect bloom, my life found its perfect beauty when you came into it. You're more precious than the rarest rose, more beautiful than the most perfect petal, and more special than any flower in existence. You make every moment blossom with happiness!</p>
+                    <p class="signature">With all my love, Forever Yours</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- See Button Direct Path -->
+        <div class="content-stage" id="direct-rose">
+            <div class="content-wrapper">
+                <div class="gif-container celebration-animation">
+                    <img src="Gifs/Love You Cat GIF.gif" alt="Cat with Rose" class="cat-gif">
+                </div>
+                <div class="message-box victory-animation">
+                    <h1 class="rose-message">You chose to see! You're so sweet!</h1>
+                    <h2 class="main-message">Happy Rose Day</h2>
+                    <p class="love-note">My dearest love,</p>
+                    <p class="love-message">In a garden full of roses, you're the one that stands out - unique, beautiful, and forever mine. Every day with you feels like Rose Day because your presence makes my world bloom with colors I never knew existed. You're not just a rose in my garden; you're the entire garden of my heart!</p>
+                    <p class="signature">Always and forever, Your loving partner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Audio elements - NO KISS SOUND, NO CLICK SOUND -->
+    <audio id="laugh-sound">
+        <source src="mp3/cat-laugh-meme-1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="romantic-sound">
+        <source src="mp3/musica-romantica.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ignore-sound">
+        <source src="mp3/huh-cat-meme.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="suspicious-sound">
+        <source src="mp3/among-us-impostor-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="alarm-sound">
+        <source src="mp3/alarm_QenbR8T.mp3" type="audio/mpeg">
+    </audio>
+   
+    <script src="script.js"></script>
+</body>
+</html>
